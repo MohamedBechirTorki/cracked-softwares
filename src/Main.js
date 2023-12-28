@@ -1,11 +1,11 @@
 import React from "react";
 import { data } from "./data";
-import Application from "./Card";
+import Application from "./Application";
 
 export default function Main() {
   console.log(data);
   return (
-    <main className="row">
+    <main>
       {data.map((app) => {
         return <Application app={app} />;
       })}
