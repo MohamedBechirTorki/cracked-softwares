@@ -1,19 +1,17 @@
 import React from "react";
-
-export default function Card() {
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+export default function Application({ app }) {
   return (
-    <div className="card" style={{ width: "18rem" }}>
-      <img className="card-img-top" src="..." alt="Card image cap" />
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" className="btn btn-primary">
-          Go somewhere
-        </a>
-      </div>
+    <div class="col-md-4 col-sm-6">
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={app.pic} style={{ padding: "10px" }} />
+        <Card.Body>
+          <Card.Title>{app.title}</Card.Title>
+          <Card.Text>{app.paragraph}</Card.Text>
+          <Button variant="primary">Download</Button>
+        </Card.Body>
+      </Card>
     </div>
   );
 }
